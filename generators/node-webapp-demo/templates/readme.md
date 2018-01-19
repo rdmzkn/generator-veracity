@@ -17,19 +17,12 @@ This Node.js application shows a quick example on how to perform authentication 
 
 ### Step 1: Register your application
 
-TODO
+Go the Veracity for Developers site and log in. In your developer progile you can register new applications. 
 
-### Step 2: Download and install node.js
 
-TODO
+### Step 2: Configure the application
 
-### Step 3: Download the repository code
-
-TODO
-
-### Step 4: Configure the application
-
-TODO
+When your application is created, copy the client id and client secrets into the config.js file
 
 ### Step 5: Run the application
 
@@ -39,9 +32,9 @@ Once all the above steps are completed all that is left is to start the applicat
 npm start
 ```
 
-You should see 
+Go to https://localhost:3000
 
-## Description
+Note that you will need to include the https 
 
 ## Overview
 
@@ -72,7 +65,7 @@ This is the process we have set up in this demo application. Check the code comm
 
 If the authentication flow or apis in this demo are updated this section will contain a description of the changes and any updates you may need to do to your code in order to support these.
 
-v0.0.1:
+v0.1.0:
 
 - Initial release
 
