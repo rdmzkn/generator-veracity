@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Brede Børhaug",
+      "authorEmail": "brede.borhaug@dnvgl.com",
+      "authorUrl": "https://developer.veracity.com"
+    }
+  }
+}
