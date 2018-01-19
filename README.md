@@ -25,7 +25,7 @@ yo veracity
 
 ## License
 
-Apache-2.0 © [Brede Børhaug](https://developer.veracity.com)
+Apache-2.0 © [DNV GL](https://developer.veracity.com)
 
 
 [npm-image]: https://badge.fury.io/js/generator-veracity.svg
