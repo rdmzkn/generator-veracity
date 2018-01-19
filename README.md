@@ -7,13 +7,13 @@ First, install [Yeoman](http://yeoman.io) and generator-veracity using [npm](htt
 
 ```bash
 npm install -g yo
-npm install -g generator-veracity
+npm install -g @veracity/generator-veracity
 ```
 
 Then generate your new project:
 
 ```bash
-yo veracity
+yo @veracity/veracity
 ```
 
 ## Getting To Know Yeoman
