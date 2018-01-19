@@ -27,13 +27,14 @@ module.exports = class extends Generator {
     this.fs.copy(
       this.templatePath('./**'),
       this.destinationPath('./')
-
-      //      This.templatePath('readme.md'),
-      //      this.destinationPath('readme.md')
     );
   }
 
   install() {
-    this.installDependencies();
+    this.installDependencies({
+            npm: true,
+            bower: false,
+            yarn: false
+          }); 
   }
 };
