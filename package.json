@@ -1,7 +1,7 @@
 {
   "name": "@veracity/generator-veracity",
   "version": "0.1.0",
-  "description": "Yeoman generator for Veracity applications",
+  "description": "Create Veracity applications in a few sec",
   "homepage": "https://developer.veracity.com",
   "author": "Brede Børhaug <brede.borhaug@dnvgl.com> (https://developer.veracity.com)",
   "files": [
