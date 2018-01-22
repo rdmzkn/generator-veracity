@@ -10,18 +10,23 @@ npm install -g yo
 npm install -g @veracity/generator-veracity
 ```
 
-Then generate your new project:
+Then do the following to generate your projects:
 
+NodeJs demo webapp
 ```bash
-yo @veracity/veracity
+yo @veracity/veracity:node-webapp-demo
 ```
 
-## Getting To Know Yeoman
+## Update
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+To update your Veracity application generator to the latest release, run the following:
+
+```bash
+yo 
+```
+
+Select update, and pick the generator to update. Then we fix the rest.
+
 
 ## License
 
