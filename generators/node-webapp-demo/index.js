@@ -10,15 +10,19 @@ module.exports = class extends Generator {
 
     const prompts = [
       {
-        type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to create your Veracity demo app?',
-        default: true
+        type: 'input',
+        name: 'CreateApp',
+        message: 'Whats the name of your demo app?',
+        default : this.appname // Default to current folder name
+      },{
+        type: 'confirme',
+        name: 'cool',
+        message: 'Cool. When Im all done, please update the config.js in the root folder with the client ID and client Secret.',
+        default : true
       }
     ];
 
     return this.prompt(prompts).then(props => {
-      // To access props later use this.props.someAnswer;
       this.props = props;
     });
   }
