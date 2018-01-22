@@ -7,7 +7,7 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the stunning ' + chalk.red('generator-veracity') + ' generator!'
+      'Welcome to the stunning Veracity app generator!'
     ));
 
     const prompts = [{
@@ -31,6 +31,10 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies();
+    this.installDependencies({
+            npm: true,
+            bower: false,
+            yarn: false
+          }); 
   }
 };
