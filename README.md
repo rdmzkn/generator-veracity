@@ -1,4 +1,4 @@
-# generator-veracity [![npm version](https://badge.fury.io/js/%40veracity%2Fgenerator-veracity.svg)](https://badge.fury.io/js/%40veracity%2Fgenerator-veracity) [![Dependency Status][daviddm-image]][daviddm-url]
+# Generator for creating Veracity Apps [![npm version](https://badge.fury.io/js/%40veracity%2Fgenerator-veracity.svg)](https://badge.fury.io/js/%40veracity%2Fgenerator-veracity) [![Dependency Status][daviddm-image]][daviddm-url]
 
 > Yeoman generator for Veracity applications
 
