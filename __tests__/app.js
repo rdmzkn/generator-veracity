@@ -3,15 +3,15 @@ const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
-describe('generator-veracity:app', () => {
-  beforeAll(() => {
-    return helpers.run(path.join(__dirname, '../generators/app'))
-      .withPrompts({someAnswer: true});
+
+// TODO: Add tests
+
+describe('backbone:app', function () {
+  it('generates a project with require.js', function () {
+      // assert the file exist
+      // assert the file uses AMD definition
   });
 
-  it('creates files', () => {
-    assert.file([
-      'dummyfile.txt'
-    ]);
-  });
+  it('generates a project with webpack');
 });
+

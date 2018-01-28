@@ -6,9 +6,13 @@ const yosay = require('yosay');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the wicked ' + chalk.red('@veracity/generator-veracity') + ' generator!'
-    ));
+    this.log(
+      yosay(
+        'Welcome to the wicked ' +
+        chalk.red('@veracity/generator-veracity') +
+        ' generator!'
+      )
+    );
 
     const prompts = [{
       type: 'confirm',
@@ -32,9 +36,9 @@ module.exports = class extends Generator {
 
   install() {
     this.installDependencies({
-            npm: true,
-            bower: false,
-            yarn: false
-          }); 
+      npm: true,
+      bower: false,
+      yarn: false
+    });
   }
 };

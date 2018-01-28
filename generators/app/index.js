@@ -6,35 +6,40 @@ const yosay = require('yosay');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the stunning Veracity app generator!'
-    ));
-
-    const prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+    this.log(yosay('Welcome to the stunning Veracity app generator!'));
+    const prompts = [
+      {
+        type: 'input',
+        name: 'CreateApp',
+        message: 'Whats the name of your app?',
+        default: this.appname // Default to current folder name
+      },
+      {
+        type: 'confirme',
+        name: 'cool',
+        message:
+          'Cool. When Im all done, please update the config.js in the root folder with the client ID and client Secret.',
+        default: true
+      }
+    ];
 
     return this.prompt(prompts).then(props => {
-      // To access props later use this.props.someAnswer;
       this.props = props;
     });
   }
 
   writing() {
     this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.templatePath('./**'),
+      this.destinationPath('./')
     );
   }
 
   install() {
     this.installDependencies({
-            npm: true,
-            bower: false,
-            yarn: false
-          }); 
+      npm: true,
+      bower: false,
+      yarn: false
+    });
   }
 };
