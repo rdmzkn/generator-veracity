@@ -6,8 +6,7 @@ const ListItemPreview = ({ item }) => {
   if (!item) {
     return (
       <div className="preview">
-        <h3>Select an item</h3>
-        <p>Description will appear here</p>
+        <h3>Do what you can`t!</h3>
       </div>
     );
   }
