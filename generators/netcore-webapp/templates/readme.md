@@ -1,4 +1,4 @@
-# Veracity Authentication Demonstration
+# Veracity Authentication Demonstration(ASP.NET Core 2.0 MVC)
 
 **Veracity is a constantly evolving platform and the authentication flow may change in the future. The code here will be updated to reflect this.**
 

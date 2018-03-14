@@ -4,7 +4,7 @@
   "description": "Create Veracity applications in a few sec",
   "homepage": "https://developer.veracity.com",
   "author":
-    "Brede Børhaug <brede.borhaug@dnvgl.com> (https://developer.veracity.com)",
+    "Brede Børhaug <brede.borhaug@dnvgl.com>; Wang, Ming Derek <Ming.Derek.Wang@dnvgl.com>(https://developer.veracity.com)",
   "files": ["generators"],
   "main": "generators/index.js",
   "keywords": ["Veracity", "DNV GL", "yeoman-generator"],
