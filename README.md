@@ -17,6 +17,10 @@ NodeJs demo webapp
 ```bash
 yo @veracity/veracity:node-webapp-demo
 ```
+Dotnet demo webapp
+```bash
+yo @veracity/veracity:netcore-webapp
+```
 
 ## Update
 
