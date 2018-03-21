@@ -49,7 +49,7 @@ module.exports = class extends Generator {
     fs.copy(this.templatePath('appnetcore/appsettings.json'),        this.destinationPath(this.props.projectName + '/appsettings.json'));
     fs.copy(this.templatePath('appnetcore/bundleconfig.json'),        this.destinationPath(this.props.projectName + '/bundleconfig.json'));
     fs.copy(this.templatePath('appnetcore/veracity.pfx'),        this.destinationPath(this.props.projectName + '/veracity.pfx'));
-    fs.copy(this.templatePath('.gitignore'),        this.destinationPath('.gitignore'));
+    fs.copy(this.templatePath('.npmignore'),        this.destinationPath('.gitignore'));//npm will modify the name of gitignore, just change back
     fs.copy(this.templatePath('readme.md'),        this.destinationPath('readme.md'));
   }
 };
