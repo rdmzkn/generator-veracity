@@ -17,7 +17,7 @@ module.exports = class extends Generator {
       },{
         type: 'confirme',
         name: 'cool',
-        message: 'Cool. When Im all done, please update the config.js in the root folder with the client ID and client Secret.',
+        message: 'Cool. When Im all done, you can start the app. Please update the config.js in the root folder with new client ID and client Secret. You get them from your developer profile at Veracity Developer.',
         default : true
       }
     ];
