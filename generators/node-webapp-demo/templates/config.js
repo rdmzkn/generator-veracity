@@ -23,8 +23,8 @@ const serverConfig = {
 
 
 // Normally you only need to alter these options:
-const clientID = 'YOUR CLIENT ID'; // Your application ID that you get from https://developer.veracity.com when you registered your application.
-const clientSecret = 'YOUR CLIENT SECRET'; // Your application secret that you received from https://developer.veracity.com when you registered your application.
+const clientID = 'b128d927-b7bc-4559-ad99-8290aae7beb8'; // DEMO ID ONLY - Your application ID that you get from https://developer.veracity.com when you registered your application.
+const clientSecret = 'n]4e|hs1lP0aJIADt5rdvDa/'; // DEMO ONLY - Your application secret that you received from https://developer.veracity.com when you registered your application.
 const redirectUrl = 'https://localhost:3000/' // The redirect-url you registered with your application. Configure in Developerr portal
 
 
