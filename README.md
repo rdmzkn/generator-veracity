@@ -17,6 +17,12 @@ NodeJs demo webapp
 ```bash
 yo @veracity/veracity:node-webapp-demo
 ```
+Run the Nodejs demo webapp
+```bash
+node start.js
+```
+Then go to https://localhost:3000 (ignore certificate error if you do not import the cerficate)
+
 Dotnet demo webapp
 ```bash
 yo @veracity/veracity:netcore-webapp
