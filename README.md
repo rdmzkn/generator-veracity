@@ -17,16 +17,20 @@ NodeJs demo webapp
 ```bash
 yo @veracity/veracity:node-webapp-demo
 ```
-Run the Nodejs demo webapp
-```bash
-node start.js
-```
-Then go to https://localhost:3000 (ignore certificate error if you do not import the cerficate)
+Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/node-webapp-demo
 
 Dotnet demo webapp
 ```bash
 yo @veracity/veracity:netcore-webapp
 ```
+Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/netcore-webapp
+
+
+Python Django demo webapp
+```bash
+yo @veracity/veracity:Django-webapp
+```
+Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/python-django
 
 ## Update
 

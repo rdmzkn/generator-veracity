@@ -1,0 +1,4 @@
+django
+cryptography
+social-auth-core >= 1.7.0
+requests_oauth2

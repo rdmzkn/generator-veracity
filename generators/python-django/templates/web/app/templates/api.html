@@ -1,0 +1,36 @@
+{% extends "home.html" %}
+ 
+{% block mainbody %}
+
+    <style>
+            #info {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+                margin-top: 5%;
+            }
+            
+            #info td, #info th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            
+            #info tr:nth-child(even){background-color: #f2f2f2;}
+            
+            #info tr:hover {background-color: #ddd;}
+            
+            #info th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                background-color: #4CAF50;
+                color: white;
+            }
+    </style>
+
+    <table id="info">
+        <tr><th>Key</th><th>Value</th></tr>
+        {% for key,value in result.items %}
+            <tr><td>{{key}}</td><td>{{ value }}</td></tr>
+        {% endfor %}  
+    </table>
+{% endblock %}

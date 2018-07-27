@@ -6,11 +6,11 @@ const helpers = require('yeoman-test');
 describe('@veracity/generator-veracity:netcore-webapp', () => {
   beforeAll(() => {
     return helpers
-      .run(path.join(__dirname, '../generators/netcore-webapp'))
+      .run(path.join(__dirname, '../generators/python-django'))
       .withPrompts({ someAnswer: true });
   });
 
   it('creates files', () => {
-    assert.file(['appnetcore.sln']);
+    assert.file(['readme.md']);
   });
 });
