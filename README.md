@@ -28,7 +28,7 @@ Checkout usage at https://github.com/veracity/generator-veracity/tree/master/gen
 
 Python Django demo webapp
 ```bash
-yo @veracity/veracity:Django-webapp
+yo @veracity/veracity:python-django
 ```
 Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/python-django
 
