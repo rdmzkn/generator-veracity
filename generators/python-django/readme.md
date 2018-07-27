@@ -31,11 +31,11 @@ When your application is created, copy the client id , client secrets, redirectU
 
 ### Step 3: Install virtualeva and virtualenvwrapper
 
-Install virtualeva and virtualenvwrapper using pip
+Install virtualeva and virtualenvwrapper using pip and work on the project in the environment you created
 
-### Step 4: Workon the environment
+### Step 4: Install all the dependencies in requirement.txt
 
-Start to work on the project in the environment you created
+Using pip to install all the dependencies in requirement.txt
 
 
 ### Step 5: Run the application
