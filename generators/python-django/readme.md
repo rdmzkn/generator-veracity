@@ -17,7 +17,7 @@ This Django application shows a quick example on how to perform authentication a
 
 Getting started is simple! To run this sample you will need:
 
-To install Python for your operation system by following the instructions at [dot.net/core](https://www.python.org/).
+To install Python for your operation system by following the instructions at [Python](https://www.python.org/).
 An Internet connection
 
 ### Step 1: Register your application
