@@ -85,8 +85,8 @@ SOCIAL_AUTH_URL_NAMESPACE = 'veracity'
 SOCIAL_AUTH_STRATEGY = 'social_django.strategy.DjangoStrategy'
 SOCIAL_AUTH_AZUREAD_B2C_OAUTH2_TENANT_ID = 'a68572e3-63ce-4bc1-acdc-b64943502e9d'
 SOCIAL_AUTH_AZUREAD_B2C_OAUTH2_POLICY = 'B2C_1A_SignInWithADFSIdp'
-SOCIAL_AUTH_AZUREAD_B2C_OAUTH2_KEY = 'b128d927-b7bc-4559-ad99-8290aae7beb8'
-SOCIAL_AUTH_AZUREAD_B2C_OAUTH2_SECRET = 'n]4e|hs1lP0aJIADt5rdvDa/'
+SOCIAL_AUTH_AZUREAD_B2C_OAUTH2_KEY = 'using the id from veracity developer program'
+SOCIAL_AUTH_AZUREAD_B2C_OAUTH2_SECRET = 'using the secret from veracity developer program'
 SOCIAL_AUTH_AZUREAD_B2C_OAUTH2_SCOPE = [
     'https://dnvglb2cprod.onmicrosoft.com/83054ebf-1d7b-43f5-82ad-b2bde84d7b75/user_impersonation',
 ]

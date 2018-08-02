@@ -1,8 +1,8 @@
-# Veracity Authentication Demonstration(ASP.NET Core 2.0 MVC)
+# Veracity Authentication Demonstration(ASP.NET Core 2.1 MVC)
 
 **Veracity is a constantly evolving platform and the authentication flow may change in the future. The code here will be updated to reflect this.**
 
-**Last updated: 2018.03.12**
+**Last updated: 2018.08.02**
 
 This .net core application shows a quick example on how to perform authentication against the Veracity B2C tenant and retrive an authorization token in order to call the Veracity API. It uses 
 
@@ -41,6 +41,15 @@ Go to https://localhost:3000
 
 Note that you will need to include the https 
 
+## Note
+-  By default, we assume you use commandline and VS Code, if you are using visual studio to develop, try to upgrade your visual studio to latest version. The mandatory part is you want to install the .net core 2.1 from the link(http://dot.net/core). 
+-  If you are using visual studio and using IIS express as server, you need to run following command by command prompt as administrator to enable port 3000
+    ```
+        cd C:\Program Files (x86)\IIS Express
+        IisExpressAdminCmd.exe setupsslUrl -url:https://localhost:3000/ -UseSelfSigned
+    ```
+-  You can also choose appnetcore instead of IIS to avoid issue above
+
 ## Overview
 
 The authentication process can be complex to grasp at first. We highly recommend that you familiarize yourself with how the OpenIDConnect flow works if you plan to work with the Veracity APIs. See [Understand the OpenIDConnect control flow in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-openid-connect-code) for details.
@@ -69,9 +78,11 @@ This is the process we have set up in this demo application. Check the code comm
 
 If the authentication flow or apis in this demo are updated this section will contain a description of the changes and any updates you may need to do to your code in order to support these.
 
-v0.1.0:
+v1.1.0:
 
-- Initial release
+- Upgrade runtime target from 2.0 to 2.1
+- Upgrade dependency version
+- Fix issues
 
 ## References
 

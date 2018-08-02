@@ -17,20 +17,20 @@ NodeJs demo webapp
 ```bash
 yo @veracity/veracity:node-webapp-demo
 ```
-Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/node-webapp-demo
+Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/node-webapp-demo/templates
 
 Dotnet demo webapp
 ```bash
 yo @veracity/veracity:netcore-webapp
 ```
-Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/netcore-webapp
+Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/netcore-webapp/templates
 
 
 Python Django demo webapp
 ```bash
 yo @veracity/veracity:python-django
 ```
-Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/python-django
+Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/python-django/templates
 
 ## Update
 
