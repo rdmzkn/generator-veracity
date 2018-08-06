@@ -1,6 +1,6 @@
 {
   "name": "@veracity/generator-veracity",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Create Veracity applications in a few sec",
   "homepage": "https://developer.veracity.com",
   "author":
@@ -22,10 +22,10 @@
     "jest": "^23.1.0"
   },
   "dependencies": {
-    "chalk": "^2.1.0",
-    "yeoman-generator": "^2.0.3",
-    "yosay": "^2.0.1",
-    "fs-extra": "^6.0.1"
+    "chalk": "^2.4.1",
+    "yeoman-generator": "^3.1.1",
+    "yosay": "^2.0.2",
+    "fs-extra": "^7.0.0"
   },
   "jest": {
     "testEnvironment": "node"
