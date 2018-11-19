@@ -35,9 +35,6 @@ module.exports = class extends Generator {
     fs.ensureDir(this.props.projectName + '/Models');
     this.fs.copyTpl(this.templatePath('appnetcore/Controllers/AccountController.cs'), this.destinationPath(this.props.projectName + '/Controllers/AccountController.cs'),{projectName:this.props.projectName});
     this.fs.copyTpl(this.templatePath('appnetcore/Controllers/HomeController.cs'), this.destinationPath(this.props.projectName + '/Controllers/HomeController.cs'),{projectName:this.props.projectName});
-    this.fs.copyTpl(this.templatePath('appnetcore/Models/AzureAdB2COptions.cs'), this.destinationPath(this.props.projectName + '/Models/AzureAdB2COptions.cs'),{projectName:this.props.projectName});
-    this.fs.copyTpl(this.templatePath('appnetcore/Models/ErrorViewModel.cs'), this.destinationPath(this.props.projectName + '/Models/ErrorViewModel.cs'),{projectName:this.props.projectName});
-    this.fs.copyTpl(this.templatePath('appnetcore/Models/MSALSessionCache.cs'), this.destinationPath(this.props.projectName + '/Models/MSALSessionCache.cs'),{projectName:this.props.projectName});
     this.fs.copyTpl(this.templatePath('appnetcore/Program.cs'),        this.destinationPath(this.props.projectName + '/Program.cs'),{projectName:this.props.projectName});
     this.fs.copyTpl(this.templatePath('appnetcore/Startup.cs'),        this.destinationPath(this.props.projectName + '/Startup.cs'),{projectName:this.props.projectName});
     this.fs.copyTpl(this.templatePath('appnetcore.sln'),  this.destinationPath(this.props.projectName + '.sln'),{projectName:this.props.projectName});
@@ -47,8 +44,6 @@ module.exports = class extends Generator {
     fs.copy(this.templatePath('appnetcore/appnetcore.csproj'),  this.destinationPath(this.props.projectName + '/' + this.props.projectName + '.csproj'));
     fs.copy(this.templatePath('appnetcore/appsettings.Development.json'),   this.destinationPath(this.props.projectName + '/appsettings.Development.json'));
     fs.copy(this.templatePath('appnetcore/appsettings.json'),        this.destinationPath(this.props.projectName + '/appsettings.json'));
-    fs.copy(this.templatePath('appnetcore/bundleconfig.json'),        this.destinationPath(this.props.projectName + '/bundleconfig.json'));
-    fs.copy(this.templatePath('appnetcore/veracity.pfx'),        this.destinationPath(this.props.projectName + '/veracity.pfx'));
     fs.copy(this.templatePath('readme.md'),        this.destinationPath('readme.md'));
   }
 };
