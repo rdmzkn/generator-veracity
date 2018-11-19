@@ -2,7 +2,7 @@
 
 **Veracity is a constantly evolving platform and the authentication flow may change in the future. The code here will be updated to reflect this.**
 
-**Last updated: 2018.08.02**
+**Last updated: 2018.11.19**
 
 This .net core application shows a quick example on how to perform authentication against the Veracity B2C tenant and retrive an authorization token in order to call the Veracity API. It uses 
 
@@ -22,12 +22,12 @@ An Internet connection
 
 ### Step 1: Register your application
 
-Go the Veracity for Developers site and log in. In your developer progile you can register new applications. When you register the applciation redirectUri,please add /signin-oidc as the suffix.
+Go the Veracity for Developers(https://developer.veracity.com/) and register new applications in Projects(https://developer.veracity.com/projects). When you register the applciation reply url, please add /signin-oidc as the suffix.
 
 
 ### Step 2: Configure the application
 
-When your application is created, copy the client id , client secrets, redirectUri into the appsettings.json file
+When your application is created, copy the client id , client secrets, API key, redirectUri into the appsettings.json file
 
 ### Step 3: Run the application
 
@@ -78,11 +78,10 @@ This is the process we have set up in this demo application. Check the code comm
 
 If the authentication flow or apis in this demo are updated this section will contain a description of the changes and any updates you may need to do to your code in order to support these.
 
-v1.1.0:
+v2.0.0:
 
-- Upgrade runtime target from 2.0 to 2.1
-- Upgrade dependency version
-- Fix issues
+- Change the authentication flow from Hybird to Authization code
+- improve the code quality 
 
 ## References
 

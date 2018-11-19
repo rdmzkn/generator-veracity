@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
+using Veracity.Authentication.OpenIDConnect.Core;
 
-namespace <%= projectName %>
+namespace test
 {
     public class Program
     {
@@ -22,14 +17,9 @@ namespace <%= projectName %>
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseContentRoot(Directory.GetCurrentDirectory())
+                .ConfigureServices(s=>s.AddSingleton<IVeracityIntegrationConfigService, VeracityIntegrationConfigService>())
+                .ConfigureServices(s=>s.AddSingleton<IVeracityOpenIdManager,VeracityOpenIdManager>())
                 .UseStartup<Startup>()
-                .UseKestrel(options =>
-                {
-                    options.Listen(IPAddress.Loopback, 3000, listenOptions =>
-                    {
-                        listenOptions.UseHttps("veracity.pfx", "Veracity");
-                    });
-                })
                 .Build();
     }
 }
