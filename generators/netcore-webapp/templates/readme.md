@@ -17,12 +17,12 @@ This .net core application shows a quick example on how to perform authenticatio
 
 Getting started is simple! To run this sample you will need:
 
-To install .NET Core for your operation system by following the instructions at [dot.net/core](http://dot.net/core).
+To install latest .NET Core(SDK >= 2.1.4) for your operation system by following the instructions at [dot.net/core](http://dot.net/core).
 An Internet connection
 
 ### Step 1: Register your application
 
-Go the Veracity for Developers(https://developer.veracity.com/) and register new applications in Projects(https://developer.veracity.com/projects). When you register the applciation reply url, please add /signin-oidc as the suffix.
+Go the Veracity for Developers(https://developer.veracity.com/) and register new applications in Projects(https://developer.veracity.com/projects). When you register the applciation reply url, **please add /signin-oidc as the suffix, e.g. https://localhost:3000/signin-oidc**.
 
 
 ### Step 2: Configure the application
