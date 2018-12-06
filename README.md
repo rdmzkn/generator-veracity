@@ -3,8 +3,8 @@
 
 ## Installation
 
-First, make sure you have [Node.js](https://nodejs.org/) installed.
-Then, install [Yeoman](http://yeoman.io) and the Veracity App Generator using [npm](https://www.npmjs.com/):
+First, make sure you have [Node.js] installed.
+Then, install [Yeoman] and the Veracity App Generator using [npm]:
 
 ```bash
 npm install -g yo
@@ -41,6 +41,9 @@ To update your Veracity App generator to the latest release, run the following c
 npm update -g @veracity/generator-veracity
 ```
 
+[Node.js]: https://nodejs.org/
+[npm]: https://www.npmjs.com/
+[Yeoman]: http://yeoman.io
 [npm-image]: https://badge.fury.io/js/%40veracity%2Fgenerator-veracity.svg
 [npm-url]: https://badge.fury.io/js/%40veracity%2Fgenerator-veracity
 [travis-image]: https://travis-ci.org/Veracity/generator-veracity.svg?branch=master
