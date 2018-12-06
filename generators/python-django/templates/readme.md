@@ -52,7 +52,7 @@ Note that you should use http for local environment
 
 ## Overview
 
-The authentication process can be complex to grasp at first. We highly recommend that you familiarize yourself with how the OpenIDConnect flow works if you plan to work with the Veracity APIs. See [Understand the OpenIDConnect control flow in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-openid-connect-code) for details.
+The authentication process can be complex to grasp at first. We highly recommend that you familiarize yourself with how the OpenID Connect flow works if you plan to work with the Veracity APIs. See [Understand the OpenID Connect control flow in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-openid-connect-code) for details.
 
 If you are only concerned with how to perform authentication these files are the ones you should have a look at. The rest are mostly for plumbing and UI, but they are kept to demonstrate a way to structure a simple app that communicates with Veracity.
 
@@ -63,16 +63,16 @@ The authentication process can be summed up like this:
 3. Behind the scenes Azure B2C may redirect the request to ADFS in order to perform authentication. If the user logs in correctly Azure B2C will return them back to us with several pieces of information including the user identity.
 4. We receive this information and store it on our server for use later. Doing so saves us from having to call back to Azure B2C on every request in order to verify the user again.
 5. At this point we can use the information Azure B2C returned to us to perform requests to the Veracity API provided we requested the information to begin with.
-6. Every time the user performs an action that requires a call to the Veracity API we perform this by adding the users access token to the request.
+6. Every time the user performs an action that requires a call to the Veracity API, we perform this by adding the users access token to the request.
 7. Once the user finishes their work they click logout.
 8. We remove all our session information about the user and redirect them to Azure B2C so they can do the same.
-9. Finally we redirect them to ADFS so that it can remove the final set of session cookies. At this point the user is completely signed out.
+9. Finally, we redirect them to ADFS so that it can remove the final set of session cookies. At this point the user is completely signed out.
 
 This is the process we have set up in this demo application. Check the code comments for `// Overview step #` to see where we perform code that maps to specific points in the description above.
 
 ## Changes
 
-If the authentication flow or apis in this demo are updated this section will contain a description of the changes and any updates you may need to do to your code in order to support these.
+If the authentication flow or APIs in this demo are updated this section will contain a description of the changes and any updates you may need to do to your code in order to support these.
 
 v0.1.0:
 
@@ -82,6 +82,6 @@ v0.1.0:
 
 - [Veracity Service API](https://developer.veracity.com/doc/service-api)
 - [Veracity Data Fabric API](https://developer.veracity.com/doc/data-fabric-api)
-- [Azure B2C OpenIDConnect Example](https://github.com/Azure-Samples/active-directory-b2c-dotnetcore-webapp)
-- [Understand the OpenIDConnect control flow in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-openid-connect-code)
+- [Azure B2C   Example](https://github.com/Azure-Samples/active-directory-b2c-dotnetcore-webapp)
+- [Understand the OpenID Connect control flow in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-openid-connect-code)
 - [Social-app-django](https://github.com/python-social-auth/social-app-django)

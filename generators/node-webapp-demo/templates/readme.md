@@ -38,7 +38,7 @@ Note that you will need to include the https
 
 ## Overview
 
-The authentication process can be complex to grasp at first. We highly recommend that you familiarize yourself with how the OpenIDConnect flow works if you plan to work with the Veracity APIs. See [Understand the OpenIDConnect control flow in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-openid-connect-code) for details.
+The authentication process can be complex to grasp at first. We highly recommend that you familiarize yourself with how the OpenIDConnect flow works if you plan to work with the Veracity APIs. See [Understand the OpenID Connect control flow in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-openid-connect-code) for details.
 
 This application consists of several files including javascript, html and css. The files primarily concerned with authentication and authorization are: 
 
@@ -73,8 +73,8 @@ v0.1.0:
 
 - [Veracity Service API](https://developer.veracity.com/doc/service-api)
 - [Veracity Data Fabric API](https://developer.veracity.com/doc/data-fabric-api)
-- [Azure B2C OpenIDConnect Example](https://github.com/AzureADQuickStarts/B2C-WebApp-OpenIDConnect-NodeJS)
-- [Understand the OpenIDConnect control flow in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-openid-connect-code)
+- [Azure B2C OpenID Connect Example](https://github.com/AzureADQuickStarts/B2C-WebApp-OpenIDConnect-NodeJS)
+- [Understand the OpenID Connect control flow in Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-openid-connect-code)
 - [Microsoft Azure Active Directory Passport.js Plug-In](https://github.com/AzureAD/passport-azure-ad)
 - [ExpressJS API reference](https://expressjs.com/en/4x/api.html)
 - [passportjs](http://www.passportjs.org/)

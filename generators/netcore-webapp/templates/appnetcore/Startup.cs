@@ -11,10 +11,12 @@ namespace test
     public class Startup
     {
         private readonly IVeracityOpenIdManager _veracityOpenIdManager;
+        
         public Startup(IVeracityOpenIdManager veracityOpenIdManager)
         {
             _veracityOpenIdManager = veracityOpenIdManager;
         }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -29,6 +31,7 @@ namespace test
             services.AddMvc();
             services.AddSession();
         }
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -47,5 +50,4 @@ namespace test
             });
         }
     }
-
 }
