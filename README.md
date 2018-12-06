@@ -1,45 +1,45 @@
-# Generator for creating Veracity Apps [![npm version](https://badge.fury.io/js/%40veracity%2Fgenerator-veracity.svg)](https://badge.fury.io/js/%40veracity%2Fgenerator-veracity) [![Dependency Status][daviddm-image]][daviddm-url]
-
+# Veracity App Generator [![npm version](https://badge.fury.io/js/%40veracity%2Fgenerator-veracity.svg)](https://badge.fury.io/js/%40veracity%2Fgenerator-veracity) [![Dependency Status][daviddm-image]][daviddm-url]
 
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-veracity using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, make sure you have [Node.js](https://nodejs.org/) installed.
+Then, install [Yeoman](http://yeoman.io) and the Veracity App Generator using [npm](https://www.npmjs.com/):
 
 ```bash
 npm install -g yo
 npm install -g @veracity/generator-veracity
 ```
 
-Then do the following to generate your projects:
-
-NodeJs demo webapp
+### Generate a Node.js web app
+Run the generator from the command line
 ```bash
 yo @veracity/veracity:node-webapp-demo
 ```
-Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/node-webapp-demo/templates
+and see the [documentation](https://github.com/veracity/generator-veracity/tree/master/generators/node-webapp-demo/templates)
+for more information about how to configure your application.
 
-Dotnet demo webapp
+### Generate an ASP.NET Core web app
+Run the Veracity app generator from the command line
 ```bash
 yo @veracity/veracity:netcore-webapp
 ```
-Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/netcore-webapp/templates
+and see the [documentation](https://github.com/veracity/generator-veracity/tree/master/generators/netcore-webapp/templates)
+for more information about how to configure your application.
 
 
-Python Django demo webapp
+### Generate a Python Django web app
 ```bash
 yo @veracity/veracity:python-django
 ```
-Checkout usage at https://github.com/veracity/generator-veracity/tree/master/generators/python-django/templates
+and see the [documentation](https://github.com/veracity/generator-veracity/tree/master/generators/python-django/templates)
+for more information about how to configure your application.
 
-## Update
-
-To update your Veracity application generator to the latest release, run the following:
-
+## Update the Veracity App Generator
+To update your Veracity App generator to the latest release, run the following command
 ```bash
 npm update -g @veracity/generator-veracity
 ```
-
 
 [npm-image]: https://badge.fury.io/js/generator-veracity.svg
 [npm-url]: https://npmjs.org/package/generator-veracity
