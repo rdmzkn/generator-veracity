@@ -10,7 +10,6 @@ namespace test
     {
         public static void Main(string[] args)
         {
-
             BuildWebHost(args).Run();
         }
 
@@ -18,7 +17,7 @@ namespace test
             WebHost.CreateDefaultBuilder(args)
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .ConfigureServices(s=>s.AddSingleton<IVeracityIntegrationConfigService, VeracityIntegrationConfigService>())
-                .ConfigureServices(s=>s.AddSingleton<IVeracityOpenIdManager,VeracityOpenIdManager>())
+                .ConfigureServices(s=>s.AddSingleton<IVeracityOpenIdManager, VeracityOpenIdManager>())
                 .UseStartup<Startup>()
                 .Build();
     }

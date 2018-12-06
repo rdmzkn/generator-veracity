@@ -34,10 +34,10 @@ const redirectUrl = 'https://localhost:3000/' // The redirect-url you registered
 // These settings usually do not change between applications.
 //
 const tenantID = 'a68572e3-63ce-4bc1-acdc-b64943502e9d'; // Veracity tenant ID
-const policyName = 'B2C_1A_SignInWithADFSIdp'; // The policy to use when contacting Azure B2C/ADFS
+const policyName = 'B2C_1A_SignInWithADFSIdp'; // The policy to use when contacting Azure B2C
 
 const authConfig = {
-  // The options we must pass to the OIDCStrategy. See https://github.com/AzureAD/passport-azure-ad
+  // The options we must pass to OpenID Connect. See https://github.com/AzureAD/passport-azure-ad
   oidcOptions: {
     identityMetadata: `https://login.microsoftonline.com/${tenantID}/v2.0/.well-known/openid-configuration`,
     clientID,
@@ -50,7 +50,7 @@ const authConfig = {
 
   // Which scopes we want to retrieve.
   scope: [
-    'openid', // Perform OpenIDConnect flow and returns the id_token.
+    'openid', // Perform OpenID Connect flow and returns the id_token.
     'https://dnvglb2cprod.onmicrosoft.com/83054ebf-1d7b-43f5-82ad-b2bde84d7b75/user_impersonation' // Request access token for Veracity API and returns the access_token.
   ],
 

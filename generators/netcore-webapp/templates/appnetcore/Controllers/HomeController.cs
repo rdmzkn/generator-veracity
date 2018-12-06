@@ -35,7 +35,6 @@ namespace <%= projectName %>.Controllers
             var response = await client.SendAsync(request);
             ViewData["Payload"] = await response.Content.ReadAsStringAsync();
             return View();
-
         }
     }
 }
