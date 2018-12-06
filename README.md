@@ -41,11 +41,6 @@ npm update -g @veracity/generator-veracity
 ```
 
 
-## License
-
-Apache-2.0 © [DNV GL](https://developer.veracity.com)
-
-
 [npm-image]: https://badge.fury.io/js/generator-veracity.svg
 [npm-url]: https://npmjs.org/package/generator-veracity
 [travis-image]: https://travis-ci.org/Veracity/generator-veracity.svg?branch=master
