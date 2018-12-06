@@ -37,10 +37,8 @@ Checkout usage at https://github.com/veracity/generator-veracity/tree/master/gen
 To update your Veracity application generator to the latest release, run the following:
 
 ```bash
-yo 
+npm update -g @veracity/generator-veracity
 ```
-
-Select update, and pick the generator to update. Then we fix the rest.
 
 
 ## License
