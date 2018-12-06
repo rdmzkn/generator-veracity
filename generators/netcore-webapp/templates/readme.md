@@ -1,4 +1,4 @@
-# Veracity Authentication Demonstration(ASP.NET Core 2.1 MVC)
+# Veracity Authentication Demonstration (ASP.NET Core 2.1 MVC)
 
 **Veracity is a constantly evolving platform and the authentication flow may change in the future. The code here will be updated to reflect this.**
 
@@ -78,8 +78,8 @@ If the authentication flow or APIs in this demo are updated, this section will c
 
 v2.0.0:
 
-- Change the authentication flow from Hybird to Authization code
-- improve the code quality 
+- Change the authentication flow from Hybrid to Authorization code
+- Improve the code quality 
 
 ## References
 
