@@ -1,4 +1,4 @@
-# Veracity App Generator [![npm version](https://badge.fury.io/js/%40veracity%2Fgenerator-veracity.svg)](https://badge.fury.io/js/%40veracity%2Fgenerator-veracity) [![Dependency Status][daviddm-image]][daviddm-url]
+# Veracity App Generator [![npm version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 
 ## Installation
@@ -41,8 +41,8 @@ To update your Veracity App generator to the latest release, run the following c
 npm update -g @veracity/generator-veracity
 ```
 
-[npm-image]: https://badge.fury.io/js/generator-veracity.svg
-[npm-url]: https://npmjs.org/package/generator-veracity
+[npm-image]: https://badge.fury.io/js/%40veracity%2Fgenerator-veracity.svg
+[npm-url]: https://badge.fury.io/js/%40veracity%2Fgenerator-veracity
 [travis-image]: https://travis-ci.org/Veracity/generator-veracity.svg?branch=master
 [travis-url]: https://travis-ci.org/Veracity/generator-veracity
 [daviddm-image]: https://david-dm.org/Veracity/generator-veracity.svg?theme=shields.io
