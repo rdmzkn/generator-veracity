@@ -24,7 +24,7 @@ Go the Veracity for Developers site and log in. In your developer progile you ca
 
 When your application is created, copy the client id and client secrets into the config.js file
 
-### Step 5: Run the application
+### Step 3: Run the application
 
 Once all the above steps are completed all that is left is to start the application. Open a terminal or command line in the root folder of the application on your drive and run:
 
