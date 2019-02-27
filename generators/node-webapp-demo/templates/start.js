@@ -147,6 +147,7 @@ app.get('/me', ensureAuthenticated, (req, res) => {
     url,
     headers: {
       'Accept': 'application/json', // Instruct the API that we want JSON data back.
+      'Ocp-Apim-Subscription-Key': authConfig.veracityServiceApiKey, // Add the subscription key for the Veracity Services API
       'Authorization': 'Bearer '+req.user.access_token // Fetch the access token for the user and embed it in the request. Without this we will not be allowed to perform the request.
     }
   }).then(result => {
@@ -167,6 +168,7 @@ app.get('/services', ensureAuthenticated, (req, res) => {
     url,
     headers: {
       'Accept': 'application/json', // Instruct the API that we want JSON data back.
+      'Ocp-Apim-Subscription-Key': authConfig.veracityServiceApiKey, // Add the subscription key for the Veracity Services API
       'Authorization': 'Bearer '+req.user.access_token // Fetch the access token for the user and embed it in the request. Without this we will not be allowed to perform the request.
     }
   }).then(result => {

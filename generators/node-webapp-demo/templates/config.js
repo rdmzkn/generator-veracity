@@ -25,8 +25,8 @@ const serverConfig = {
 // Normally you only need to alter these options:
 const clientID = 'CLIENT ID'; // Your application ID that you get from https://developer.veracity.com when you create your application in My Projects.
 const clientSecret = 'CLIENT SECRET'; // Your application secret that you received from https://developer.veracity.com when you create your application in My Projects.
-const redirectUrl = 'https://localhost:3000/' // The redirect-url you registered with your application. Configure in Developerr portal
-
+const redirectUrl = 'https://localhost:3000/' // The redirect-url you registered with your application. Configure in Developer portal
+const veracityServiceApiKey = 'YOUR API SUBSCRIPTION KEY' // Go to https://api-portal.veracity.com/products/veracity-myservices to subscibe to the API and get subscription key
 
 
 
@@ -73,7 +73,9 @@ const authConfig = {
 
   // This is the starting point for the Veracity API. From here we can request information and perform actions.
   // See https://developer.veracity.com/doc/service-api
-  veracityApiEndpoint: 'https://myapiv3.dnvgl.com' //
+  veracityApiEndpoint: 'https://api.veracity.com/platform', //
+
+  veracityServiceApiKey // include the config for the API subscription key
 };
 
 // Export our configuration objects
