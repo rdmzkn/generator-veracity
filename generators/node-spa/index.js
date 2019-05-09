@@ -37,14 +37,20 @@ You will then be provided with the necessary parameters to authenticate with Ver
 			},
 			{
 				type: "input",
+				name: "companyName",
+				message: "Please enter your company name",
+				default: ""
+			},
+			{
+				type: "input",
 				name: "clientId",
-				message: "Please provide the client id you received when creating the application in developer.veracity.com or leave blank to add it later",
+				message: "Please enter the client id you received when creating the application in developer.veracity.com or hit enter to add it later",
 				default: "[client-id-goes-here]"
 			},
 			{
 				type: "input",
 				name: "clientSecret",
-				message: "Please provide the client secret you recevied when creating the application in developer.veracity.com or leave blank to add it later",
+				message: "Please enter the client secret you recevied when creating the application in developer.veracity.com or hit enter to add it later",
 				default: "[client-secret-goes-here]"
 			},
 			{
@@ -53,6 +59,17 @@ You will then be provided with the necessary parameters to authenticate with Ver
 				message: `The project will be created in "${chalk.bold(this.destinationRoot())}". Is this correct?`
 			}
 		])
+
+		if (!answers.companyName) {
+			const moreAnswers = await this.prompt([
+				{
+					type: "input",
+					name: "userName",
+					message: "You did not specify a company so please enter your name instead"
+				}
+			])
+			this.answers = { ...moreAnswers, ...this.answers }
+		}
 		
 		if (!this.answers.confirmed) {
 			this.env.error("User cancelled the operation")

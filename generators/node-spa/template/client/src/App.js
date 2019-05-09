@@ -4,6 +4,10 @@ import { ducks } from "./ducks"
 import { Provider } from "react-redux"
 import Routes from "./routes/routes"
 import { BrowserRouter as Router } from "react-router-dom"
+import Header from "./features/Header"
+import Footer from "./features/Footer"
+
+import classes from "./App.scss"
 
 export class App extends React.PureComponent {
 	constructor(props) {
@@ -30,7 +34,11 @@ export class App extends React.PureComponent {
 		return (
 			<Provider store={this.store}>
 				<Router>
-					<Routes/>
+					<Header/>
+					<div className={classes.content}>
+						<Routes ContentComponent={React.createElement("div", { className: classes.content })}/>
+					</div>
+					<Footer/>
 				</Router>
 			</Provider>
 		)
