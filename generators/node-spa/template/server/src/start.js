@@ -3,6 +3,9 @@ const configLoader = require("./config")
 const parseError = require("./utils/parseError")
 
 const setupLogger = require("./init/setupLogging")
+const setupAuthentication = require("./init/setupAuthentication")
+const setupUserApis = require("./init/setupUserApis")
+const setupStorageApis = require("./init/setupStorageApis")
 const setupRoutes = require("./init/setupRoutes")
 const setupServer = require("./init/setupServer")
 
@@ -12,6 +15,9 @@ const start = async () => {
 	const prestart = async () => {
 		config = await configLoader()
 		log = setupLogger(config.server.logDir)
+		if (!config.auth.clientID || !config.auth.clientSecret) {
+			throw new Error("You MUST specify the client id and client secret in the configuration file before your code can run.")
+		}
 	}
 	await prestart().catch(error => {
 		// eslint-disable-next-line no-console
@@ -20,11 +26,14 @@ const start = async () => {
 	})
 
 	const startAsync = async () => {
-		log.debug("Application starting")
+		log.info("Application starting")
 
 		app.set("trust proxy", true) // Ensures that proxy servers such as those employed by Azure AppServices still result in a trusted secure connection
 		app.set("etag", false) // Disable etags to prevent overzealous caching
 
+		await setupAuthentication(app, config.auth, log)
+		setupUserApis(app)
+		setupStorageApis(app, config)
 		setupRoutes(app, config.server.staticRoot, log)
 
 		await setupServer(app, log, config.server)
