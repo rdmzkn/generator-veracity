@@ -25,7 +25,7 @@ const start = async () => {
 		app.set("trust proxy", true) // Ensures that proxy servers such as those employed by Azure AppServices still result in a trusted secure connection
 		app.set("etag", false) // Disable etags to prevent overzealous caching
 
-		setupRoutes(app, config.server.staticRoot)
+		setupRoutes(app, config.server.staticRoot, log)
 
 		await setupServer(app, log, config.server)
 	}

@@ -15,7 +15,6 @@ module.exports = {
 		logDir: path.resolve(__dirname, "../../logs"),
 
 		// This is the folder where static assets (the client) should be served from.
-		// You may need to change this for production
 		staticRoot: path.resolve(__dirname, "../../../dist/client")
 	}
 }
