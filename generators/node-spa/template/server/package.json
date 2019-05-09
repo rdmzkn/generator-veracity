@@ -1,0 +1,9 @@
+{
+  "name": "veracity-node-spa-server",
+  "version": "1.0.0",
+  "description": "The server side code for Veracity Single-Page-Application",
+  "main": "start.js",
+  "keywords": [],
+  "author": "DNV GL",
+  "license": "ISC"
+}
