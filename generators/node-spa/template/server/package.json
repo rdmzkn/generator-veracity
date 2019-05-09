@@ -5,5 +5,15 @@
   "main": "start.js",
   "keywords": [],
   "author": "DNV GL",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "passport": "^0.4.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "node-forge": "^0.8.2",
+    "rimraf": "^2.6.3"
+  }
 }

@@ -1,6 +1,9 @@
 # Veracity Single-Page-Application
 Welcome to your generated Single-Page application. This is your starting point for building an app that integrates with Veracity. The project consists of a `client` and `server`. To read more about these parts open their respective folders and check out their `README.md` files.
 
+## **NOTICE**
+This code gives you a good starting point, but it is provide without **ANY** warranty expressed or implied. Use at your own risk.
+
 ## Development
 This project is optimized for development with [VisualStudio Code (VSCode)](https://code.visualstudio.com/). It contains the necessary configuration to start the server component in debug mode directly by hitting F5 (see documentation for the debug tool in VSCode online).
 

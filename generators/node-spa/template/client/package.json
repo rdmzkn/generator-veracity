@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf ../dist/client && parcel build ./src/index.html --out-dir ../dist/client",
-    "start": "rimraf ./cache && parcel ./src/index.html --https --port 3010 --hmr-port 3011"
+    "start": "rimraf ./cache && rimraf ../dist/client && parcel ./src/index.html --https --port 3010 --hmr-port 3011 --out-dir ../dist/client"
   },
   "keywords": [],
   "author": "DNV GL",

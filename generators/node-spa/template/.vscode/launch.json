@@ -5,10 +5,11 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Debug Veracit SPA",
+			"name": "Debug Veracity SPA",
 			"type": "node",
 			"request": "launch",
 			"program": "${workspaceFolder}/server/src//start.js",
+			"outputCapture": "std",
 			"cwd": "${workspaceFolder}/server/src"
 		},
 		{
@@ -16,6 +17,7 @@
 			"type": "node",
 			"request": "launch",
 			"program": "${fileDirname}/${fileBasename}",
+			"outputCapture": "std",
 			"cwd": "${fileDirname}"
 		}
 	]
