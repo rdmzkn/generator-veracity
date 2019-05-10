@@ -27,6 +27,7 @@ You will then be provided with the necessary parameters to authenticate with Ver
 `)
 		)
 	}
+
 	async prompting() {
 		this.answers = await this.prompt([
 			{
@@ -54,29 +55,41 @@ You will then be provided with the necessary parameters to authenticate with Ver
 				default: "[client-secret-goes-here]"
 			},
 			{
-				type: "confirm",
-				name: "confirmed",
-				message: `The project will be created in "${chalk.bold(this.destinationRoot())}". Is this correct?`
+				type: "input",
+				name: "apiKey",
+				message: "Please enter the API Subscription id you recevied when subscribing to the api or hit enter to add it later",
+				default: "[api-key-goes-here]"
 			}
 		])
 
-		if (!answers.companyName) {
+		if (!this.answers.companyName) {
 			const moreAnswers = await this.prompt([
 				{
 					type: "input",
 					name: "userName",
-					message: "You did not specify a company so please enter your name instead"
+					message: "You did not specify a company so please enter your name instead",
+					default: "Incognito"
 				}
 			])
 			this.answers = { ...moreAnswers, ...this.answers }
 		}
-		
-		if (!this.answers.confirmed) {
-			this.env.error("User cancelled the operation")
-		}
 	}
 
 	writing() {
+		this.fs.copyTpl(
+			this.templatePath("./**"),
+			this.destinationPath("./"),
+			{
+				...this.answers,
+				ignoreTokens: "tokens.js"
+			}
+		)
 		this.log("Generating app")
+	}
+	install() {
+		/*this.installDependencies({
+			npm: true,
+			bower: false
+		})*/
 	}
 }

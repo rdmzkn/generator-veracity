@@ -1,7 +1,17 @@
 # Veracity Single-Page-Application
 Welcome to your generated Single-Page application. This is your starting point for building an app that integrates with Veracity. The project consists of a `client` and `server`. To read more about these parts open their respective folders and check out their `README.md` files.
 
-## **NOTICE**
+## **BEFORE YOU BEGIN**
+Before you start any kind of development here or connect it to your code repository you should avoid committing files that are not needed. For GIT you do this by creating a file `.gitignore` in the root folder of your project. It should contain at least the following:
+
+```
+node_modules
+.cache
+dist
+config/tokens.js
+```
+
+## Caveat
 This code gives you a good starting point, but it is provide without **ANY** warranty expressed or implied. Use at your own risk.
 
 ## Development
