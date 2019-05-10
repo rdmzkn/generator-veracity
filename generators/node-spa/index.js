@@ -27,7 +27,7 @@ You will then be provided with the necessary parameters to authenticate with Ver
 `)
 		)
 	}
-
+/*
 	async prompting() {
 		this.answers = await this.prompt([
 			{
@@ -40,7 +40,7 @@ You will then be provided with the necessary parameters to authenticate with Ver
 				type: "input",
 				name: "companyName",
 				message: "Please enter your company name",
-				default: ""
+				default: "Incognito"
 			},
 			{
 				type: "input",
@@ -61,30 +61,24 @@ You will then be provided with the necessary parameters to authenticate with Ver
 				default: "[api-key-goes-here]"
 			}
 		])
-
-		if (!this.answers.companyName) {
-			const moreAnswers = await this.prompt([
-				{
-					type: "input",
-					name: "userName",
-					message: "You did not specify a company so please enter your name instead",
-					default: "Incognito"
-				}
-			])
-			this.answers = { ...moreAnswers, ...this.answers }
-		}
 	}
-
+*/
 	writing() {
+		/*
 		this.fs.copyTpl(
 			this.templatePath("./**"),
 			this.destinationPath("./"),
 			{
 				...this.answers,
 				ignoreTokens: "tokens.js"
-			}
-		)
-		this.log("Generating app")
+			},
+			{globOptions: { dot: true }}
+		)*/
+		
+		this.fs.copy(
+			this.templatePath("./**"),
+			this.destinationPath("./"),
+			{globOptions: { dot: true }})
 	}
 	install() {
 		/*this.installDependencies({

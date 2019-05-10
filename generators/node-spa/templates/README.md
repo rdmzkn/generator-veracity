@@ -8,7 +8,7 @@ Before you start any kind of development here or connect it to your code reposit
 node_modules
 .cache
 dist
-config/tokens.js
+server/src/config/tokens.js
 ```
 
 ## Caveat
