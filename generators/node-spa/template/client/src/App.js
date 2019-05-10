@@ -17,6 +17,10 @@ export class App extends React.PureComponent {
 		window.app = this // This exposes our app instance on window so that we can run debug commands from the console.
 	}
 
+	componentDidMount() {
+		this.store.dispatch(ducks.user.fetchUser())
+	}
+
 	/**
 	 * This exposes all our ducks on the app instance to allow us easier access for debugging.
 	 */

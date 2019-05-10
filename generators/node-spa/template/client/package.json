@@ -11,7 +11,9 @@
   "author": "DNV GL",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "core-js": "^3.0.1",
+    "lodash": "^4.17.11",
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -24,6 +26,10 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.5.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",

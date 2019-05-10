@@ -1,12 +1,6 @@
 const request = require("request-promise-native")
 const promiseRouteHandler = require("../utils/promiseRouteHandler")
-
-const notAuthMiddleware = (req, res, next) => {
-	if (!req.user || !req.isAuthenticated()) {
-		res.status(400).send("Unauthorized")
-	}
-	next()
-}
+const notAuthMiddleware = require("../utils/notAuthMiddleware")
 
 module.exports = (app, authConfig) => {
 	app.get("/_api/user", notAuthMiddleware, promiseRouteHandler( async (req, res) => {

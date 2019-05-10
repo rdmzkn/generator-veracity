@@ -18,6 +18,9 @@ export const Header = ({ isLoggedIn, userInitials }) => (
 				<span>{userInitials}</span>
 			</Link>
 		)}
+		{!isLoggedIn && (
+			<a href="/login">Log in</a>
+		)}
 	</header>
 )
 Header.propTypes = {
