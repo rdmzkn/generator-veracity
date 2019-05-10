@@ -1,3 +1,6 @@
+const request = require("request-promise-native")
+const promiseRouteHandler = require("../utils/promiseRouteHandler")
+
 const notAuthMiddleware = (req, res, next) => {
 	if (!req.user || !req.isAuthenticated()) {
 		res.status(400).send("Unauthorized")
@@ -5,8 +8,15 @@ const notAuthMiddleware = (req, res, next) => {
 	next()
 }
 
-module.exports = (app,) => {
-	app.get("/_api/user", notAuthMiddleware, (req, res) => {
-		res.send(req.user)
-	})
+module.exports = (app, authConfig) => {
+	app.get("/_api/user", notAuthMiddleware, promiseRouteHandler( async (req, res) => {
+		const response = await request({
+			url: "https://api.veracity.com/Veracity/Services/V3/my/profile",
+			headers: {
+				"Ocp-Apim-Subscription-Key": authConfig.apiKey, // Grab the subscription key for the Services API
+				Authorization: "Bearer "+req.user.tokens.services.access_token // And the access token to authorize the request
+			}
+		})
+		res.send(response)
+	}))
 }

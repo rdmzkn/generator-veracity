@@ -1,3 +1,4 @@
+const tokens = require("./tokens")
 const path = require("path")
 
 module.exports = {
@@ -18,9 +19,8 @@ module.exports = {
 		staticRoot: path.resolve(__dirname, "../../../dist/client")
 	},
 	auth: {
+		...tokens,
 		sessionSecret: "bd9d648a-b2ba-46a6-a760-30e316ec899b", // The secret used by express-session. You should re-generate this for your environments.
-		clientID: "",
-		clientSecret: "", // You should load the client secret from somewhere other than this file for all other environments. Secrets SHOULD NOT be committed to source code.
 		redirectUrl: "https://localhost:3000/auth/oidc/loginreturn", // This needs to be updated for every environment
 		tenantID: "a68572e3-63ce-4bc1-acdc-b64943502e9d",
 		policyName: "B2C_1A_SignInWithADFSIdp",

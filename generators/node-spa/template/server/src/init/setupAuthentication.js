@@ -66,8 +66,8 @@ const verifier = (iss, sub, profile, jwtClaims, access_token, refresh_token, par
 
 		tokens: {
 			services: {
-				access_token: access_token,
-				refresh_token: refresh_token
+				access_token,
+				refresh_token
 			}
 		}
 	}
