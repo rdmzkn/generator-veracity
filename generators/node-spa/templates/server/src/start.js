@@ -5,7 +5,6 @@ const parseError = require("./utils/parseError")
 const setupLogger = require("./init/setupLogging")
 const setupAuthentication = require("./init/setupAuthentication")
 const setupUserApis = require("./init/setupUserApis")
-const setupStorageApis = require("./init/setupStorageApis")
 const setupRoutes = require("./init/setupRoutes")
 const setupServer = require("./init/setupServer")
 
@@ -33,7 +32,6 @@ const start = async () => {
 
 		await setupAuthentication(app, config.auth, log)
 		setupUserApis(app, config.auth)
-		setupStorageApis(app, config)
 
 		// Do this last as it adds a generic route handler
 		setupRoutes(app, config.server.staticRoot, log)
