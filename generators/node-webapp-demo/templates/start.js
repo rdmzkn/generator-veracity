@@ -31,7 +31,8 @@ app.use(expressSession({
   resave: false, // Prevent resaving session data if nothing was modified.
   saveUninitialized: false, // Only save sessions if they are actually initialized (i.e.: only save if the user is actually authenticated)
   cookie: {
-    secure: true // Set the https flag on the session cookie ensuring that it can only be sent over a secure (HTTPS) connection
+    secure: true, // Set the https flag on the session cookie ensuring that it can only be sent over a secure (HTTPS) connection
+    httpOnly: true // Set the httpOnly flag to ensure that the session id will not be accessible to client-side scripts
   }
 }));
 
