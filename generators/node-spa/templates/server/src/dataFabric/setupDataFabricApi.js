@@ -26,7 +26,12 @@ module.exports = (app, config) => {
 			const data = await JSON.parse(response)
 			res.send(data)
 		} catch(error) {
-			next(error)
+			if (error.statusCode && error.error) {
+				res.status(error.statusCode)
+				res.send(error.error)
+			} else {
+				next(error)
+			}
 		}
 	}))
 	
