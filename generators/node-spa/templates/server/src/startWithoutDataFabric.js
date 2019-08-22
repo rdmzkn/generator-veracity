@@ -3,11 +3,11 @@ const configLoader = require("./config")
 const parseError = require("./utils/parseError")
 
 const setupLogger = require("./init/setupLogging")
-const setupAuthentication = require("./dataFabric/setupAuthAndDataFabric")
+const setupAuthentication = require("./init/setupAuthentication")
 const setupUserApis = require("./init/setupUserApis")
 const setupRoutes = require("./init/setupRoutes")
 const setupServer = require("./init/setupServer")
-const setupDataFabricApi = require("./dataFabric/setupDataFabricApi")
+
 
 const start = async () => {
 	let log = undefined
@@ -32,17 +32,13 @@ const start = async () => {
 		app.set("etag", false) // Disable etags to prevent overzealous caching
 
 
-		await setupAuthentication(app, config.auth)
+		await setupAuthentication(app)
 
 		setupUserApis(app, config.auth)
-		setupDataFabricApi(app, config.auth)
 		// Do this last as it adds a generic route handler
 		setupRoutes(app, config.server.staticRoot, log)
 
 		await setupServer(app, log, config.server)
-		app.use((err, req, res, next) => {
-			res.status(err.statusCode).send({message: err.message})
-		})
 	}
 	startAsync().catch(error => {
 		log.error(parseError(error))
