@@ -19,6 +19,14 @@ yo @veracity/veracity:node-webapp-demo
 and see the [documentation](https://github.com/veracity/generator-veracity/tree/master/generators/node-webapp-demo/templates)
 for more information about how to configure your application.
 
+### Generate a Node.js SPA
+Run the generator from the command line
+```bash
+yo @veracity/veracity:node-spa
+```
+and see the [documentation](https://github.com/veracity/generator-veracity/tree/master/generators/node-spa/templates)
+for more information about how to configure your application.
+
 ### Generate an ASP.NET Core web app
 Run the Veracity app generator from the command line
 ```bash
