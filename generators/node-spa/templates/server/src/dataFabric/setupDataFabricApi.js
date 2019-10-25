@@ -20,7 +20,7 @@ module.exports = (app, config) => {
 				method: "GET",
 				headers: {
 					"Ocp-Apim-Subscription-Key": config.apiKeys.dataFabricApi,
-					"Authorization": "Bearer " + req.user.apiTokens[dataFabric].accessToken
+					"Authorization": "Bearer " + req.user.accessTokens[dataFabric].token
 				}
 			})
 			const data = await JSON.parse(response)

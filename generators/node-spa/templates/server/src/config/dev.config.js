@@ -21,7 +21,6 @@ module.exports = {
 	auth: {
 		...tokens,
 		sessionSecret: "bd9d648a-b2ba-46a6-a760-30e316ec899b", // The secret used by express-session. You should re-generate this for your environments.
-		redirectUrl: "https://localhost:3000/signin-oidc", // This needs to be updated for every environment
 		tenantID: "a68572e3-63ce-4bc1-acdc-b64943502e9d",
 		policyName: "B2C_1A_SignInWithADFSIdp",
 		scope: "https://dnvglb2cprod.onmicrosoft.com/83054ebf-1d7b-43f5-82ad-b2bde84d7b75/user_impersonation", // Request access token for Veracity Service API and returns the access_token.

@@ -55,6 +55,12 @@ It is adviced to go through the documentation before starting the application.
 			},
 			{
 				type: "input",
+				name: "replyUrl",
+				message: "Please enter the reply url you specified when creating the application in developer.veracity.com or hit enter to add it later",
+				default: ""
+			},
+			{
+				type: "input",
 				name: "servicesApiKey",
 				message: "Type Ocp-Apim-Subscription-Key if you have obtained one in the encrypted email",
 				default: ""
