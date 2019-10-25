@@ -1,22 +1,18 @@
 const { MemoryStore } = require("express-session")
-const { setupAuthFlowStrategy } = require("@veracity/node-auth/helpers")
+const { setupWebAppAuth } = require("@veracity/node-auth")
 
 module.exports = (app, config) => {
 	const settings = {
-		appOrRouter: app,
-		loginPath: "/login",
-		strategySettings: {
+		app,
+		strategy: {
 			clientId: config.clientID,
 			clientSecret: config.clientSecret,
-			replyUrl: "https://localhost:3000/signin-oidc",
+			replyUrl: config.replyUrl,
 		},
-		sessionSettings: {
+		session: {
 			secret: "<%= secret %>",
 			store: new MemoryStore()
-		},
-		onLoginComplete: (req, res) => {
-			res.redirect(req.query.redirectTo || "/")
 		}
 	}
-	setupAuthFlowStrategy(settings)
+	setupWebAppAuth(settings)
 }

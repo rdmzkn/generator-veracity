@@ -11,14 +11,6 @@ npm install -g yo
 npm install -g @veracity/generator-veracity
 ```
 
-### Generate a Node.js web app
-Run the generator from the command line
-```bash
-yo @veracity/veracity:node-webapp-demo
-```
-and see the [documentation](https://github.com/veracity/generator-veracity/tree/master/generators/node-webapp-demo/templates)
-for more information about how to configure your application.
-
 ### Generate a Node.js SPA
 Run the generator from the command line
 ```bash

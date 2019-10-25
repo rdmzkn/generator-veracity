@@ -11,7 +11,7 @@ module.exports = (app, authConfig) => {
 				url: "https://api.veracity.com/Veracity/Services/V3/my/profile",
 				headers: {
 					"Ocp-Apim-Subscription-Key": authConfig.apiKeys.servicesApi, // Grab the subscription key for the Services API
-					Authorization: "Bearer " + req.user.apiTokens[services].accessToken, // And the access token to authorize the request
+					Authorization: "Bearer " + req.user.accessTokens[services].token, // And the access token to authorize the request
 				}
 			})
 			res.send(response)
